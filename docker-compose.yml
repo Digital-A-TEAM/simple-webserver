@@ -1,15 +1,17 @@
----
-web:
-    image: nginx:latest
-    ports:
-        - 8080:80
-    volumes:
-        - ./app:/app
-        - ./default.conf:/etc/nginx/conf.d/default.conf
-    links:
-        - php
+version: "3.3"
 
-php:
-    image: php:fpm
-    volumes:
-        - ./app:/app
+services:
+    web:
+        image: nginx:latest
+        ports:
+            - 8080:80
+        volumes:
+            - ./app:/app
+            - ./default.conf:/etc/nginx/conf.d/default.conf
+        links:
+            - php
+    
+    php:
+        image: php:fpm
+        volumes:
+            - ./app:/app
