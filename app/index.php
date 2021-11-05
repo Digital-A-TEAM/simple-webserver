@@ -8,7 +8,7 @@
 </head>
 <body>
     <h2>Hello Simple Web Server!</h2>
-    <p><?= "PHP-Version: " . phpversion(); ?></p>
+    <p><?php echo 'PHP-Version: '.phpversion(); ?></p>
     <sub>Made by Webmedia 2.0 in Karlsruhe</sub>
 </body>
 </html>
